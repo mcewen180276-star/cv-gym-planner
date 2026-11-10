@@ -1,22 +1,20 @@
-CARDIO STUDIO CLASS PLANNER
+Yoga Class Planner V8 — GitHub Pages
 
-HOW TO PUBLISH ON GITHUB PAGES
-1. Unzip this download.
-2. Upload ALL files from the cardio-class-planner folder to the root of your GitHub repository (index.html, app.js, icon.svg, manifest.webmanifest, sw.js).
-3. In GitHub: Settings > Pages > Deploy from a branch > main > / (root) > Save.
-4. Open the Pages URL once deployment completes. On Android, use browser menu > Add to Home screen / Install app.
+Upload index.html, sw.js, manifest.webmanifest and icon.svg to the root of your existing GitHub Pages repository, replacing V7 files.
 
-HOW TO USE
-1. Open Equipment and enter the number of cardio machines and floor equipment available.
-2. In Exercise library, search built-in exercises or add your own. The Search web link opens a search for exercise technique; web results are not imported automatically.
-3. Open Class builder; select station count, partner format, work/rest, rounds, equipment and workout style.
-4. Generate the class, edit exercises and station styles, add notes, save and print.
-5. Open Instructor timer to run the class.
-6. Download a complete JSON backup regularly using Backups.
+IMPORTANT: Export a JSON backup from the existing app before updating. The main app continues to use localStorage key yoga-planner-v1 and retains your existing saved classes and exercise edits. The old recovery snapshot key is retained.
 
-IMPORTANT
-- The generator checks simultaneous equipment counts but does not know participant count or room capacity. For groups, ensure enough machines/implements and adjust stations manually.
-- For pairs using one machine and one floor movement, choose the partner swap format. Instructor timer announces swaps halfway through work time.
-- Check technique, individual ability, contraindications, equipment suitability and safe progression before teaching. Give a warm-up and cool-down.
-- Data lives in this browser's local storage. It does not automatically sync across devices.
-- App runs offline after first load on HTTPS (GitHub Pages). Direct file opening may not install or cache offline.
+NEW:
+- English and available Sanskrit pose names in the exercise library, class planner, teaching screen and printed plans. Names are only populated when known; descriptive chair variations may not have an established Sanskrit name. Existing user-entered Sanskrit names take priority.
+- Larger timer in portrait and landscape, with responsive layout. Rotate your device with Auto-rotate enabled. Browser orientation locking is not required.
+- Client mini app: choose Saved Classes > Client mini app or Class Planner > Export client mini app. Android may show a Share sheet, otherwise a standalone .html file downloads. Send the HTML file to your client. They can open it in a browser; it works without the instructor's account or internet once downloaded. Includes exercise names, Sanskrit where available, instructions, next exercise, countdown, previous/next, pause and reset.
+
+PRIVACY: Client mini app contains the selected class only, not your entire exercise database, other clients, or calendar. Review class safety and instructions before sharing. HTML attachments can be blocked by some messaging services; use a file-sharing service if needed. Opening local HTML files can vary by Android browser.
+
+NOTE: Timer pauses when the page is backgrounded, to avoid skipping exercises unexpectedly. Sun Salutations appear as one timed block with an expandable breakdown. Client mini apps are standalone files, not separate installable PWAs.
+
+V9 FIXES: All built-in and custom Sun Salutations can be manually added to any class style, without disabling choices or compatibility errors. New classes default to Hatha Yoga (including Start fresh). Automatic class generation continues to suggest compatible sequences. Existing saved data uses the unchanged yoga-planner-v1 storage key.
+
+V10: Client Companion class list, video searches, individually timed sun salutation movements, local music playback, bell and voice announcements.
+
+V11: Client Companion supports multiple audio files, folder/album selection where supported, sequential playlist playback, track selection and next/previous controls. Voice announces the upcoming exercise at 3 seconds remaining; bell at transition.
